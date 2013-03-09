@@ -1,4 +1,18 @@
 Watt::Application.routes.draw do
+  get "static_pages/home"
+
+  get "static_pages/pricing"
+
+  get "static_pages/how_watt_works"
+
+  get "static_pages/referrals"
+
+  get "static_pages/about"
+
+  get "static_pages/blog"
+
+  get "static_pages/jobs"
+
   resources :users
 
 
