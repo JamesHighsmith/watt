@@ -1,17 +1,23 @@
 Watt::Application.routes.draw do
-  get "static_pages/home"
+  get "users/new"
 
-  get "static_pages/pricing"
+  root to: 'static_pages#home'
 
-  get "static_pages/how_watt_works"
+  match '/signup',            to: 'users#new'
 
-  get "static_pages/referrals"
+  match '/static_pages/home', to: "static_pages#home"
 
-  get "static_pages/about"
+  match '/pricing',           to: "static_pages#pricing"
 
-  get "static_pages/blog"
+  match '/how_watt_works',    to: "static_pages#how_watt_works"
 
-  get "static_pages/jobs"
+  match '/referrals',         to: "static_pages#referrals"
+
+  match '/about',             to: "static_pages#about"
+
+  match '/blog',              to: "static_pages#blog"
+
+  match '/jobs',              to: "static_pages#jobs"
 
   resources :users
 
