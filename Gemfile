@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
+gem 'bootstrap-sass', '2.1'
 gem 'tilt', '1.3.4'
 
 group :development, :test do

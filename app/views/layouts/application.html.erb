@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Watt</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to image_tag('wattlogo.jpg'), id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "PRICING",    '#' %></li>
+              <li><%= link_to "HOW WA.TT WORKS", '#' %></li>
+              <li><%= link_to "LOGIN", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+  <footer>
+  	<header class="navbar navbar-fixed-bottom navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <nav>
+            <ul class="nav center">
+              <li><%= link_to "REFERRALS",    '#' %></li>
+              <li><%= link_to "ABOUT",    '#' %></li>
+              <li><%= link_to "BLOG", '#' %></li>
+              <li><%= link_to "JOBS", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </footer>
 </html>
