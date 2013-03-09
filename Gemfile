@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
-gem 'tilt', '1.3.5'
 
 gem 'sqlite3', :group => [:development, :test]
 group :production do
